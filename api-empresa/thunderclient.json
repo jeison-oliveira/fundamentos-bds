@@ -1,0 +1,32 @@
+// Criar Departamento
+{
+    "nome": "Recursos Humanos",
+    "sigla": "RH"
+}
+{
+    "nome": "Tecnologia da Informação",
+    "sigla": "TI"
+}
+// Criar Funcionário
+{
+    "nome": "Jeison Pereira de Oliveira",
+    "fone": "(92) 99269-0223",
+    "email": "jeison.oliveira@icomp.ufam.edu.br",
+    "idade": 31,
+    "departamentoId": "241a8260-0fad-11ee-aa27-5b5988049092"
+  }
+
+  {
+    "nome": "Ana Frazão de Oliveira",
+    "fone": "(92) 99269-0223",
+    "email": "anafrazao@gmail.com",
+    "idade": 21,
+    "departamentoId": "6bb077b0-0fad-11ee-a10a-3b5a5725fde7"
+  }
+
+  // Criar Dependentes 
+  {
+  "nome": "Luna Frazão de Oliveira",
+  "idade": 5,
+  "funcionarioId": "a45978f0-0fad-11ee-82b3-857aba23fe1c"
+}
