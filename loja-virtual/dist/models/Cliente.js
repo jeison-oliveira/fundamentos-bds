@@ -49,15 +49,6 @@ __decorate([
     __metadata("design:type", String)
 ], Cliente.prototype, "email", void 0);
 __decorate([
-    (0, sequelize_typescript_1.AllowNull)(true),
-    sequelize_typescript_1.Unique,
-    sequelize_typescript_1.IsEmail,
-    (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.STRING,
-    }),
-    __metadata("design:type", String)
-], Cliente.prototype, "sexo", void 0);
-__decorate([
     (0, sequelize_typescript_1.BelongsToMany)(() => Produto_1.Produto, () => Venda_1.Venda),
     __metadata("design:type", Array)
 ], Cliente.prototype, "produtos", void 0);

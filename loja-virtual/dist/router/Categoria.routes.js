@@ -15,27 +15,61 @@ const Categoria_1 = require("../models/Categoria");
 const categoriaRouter = (0, express_1.Router)();
 exports.categoriaRouter = categoriaRouter;
 categoriaRouter.get("/categoria", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const todasCategorias = yield Categoria_1.Categoria.findAll();
-    return res.status(200).json(todasCategorias);
+    try {
+        const todasCategorias = yield Categoria_1.Categoria.findAll();
+        return res.status(200).json(todasCategorias);
+    }
+    catch (error) {
+        return res.status(500).json({ error: error === null || error === void 0 ? void 0 : error.toString() });
+    }
 }));
 categoriaRouter.get("/categoria/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { id } = req.params;
-    const categoria = yield Categoria_1.Categoria.findByPk(id);
-    return res.status(200).json(categoria);
+    try {
+        const { id } = req.params;
+        const categoria = yield Categoria_1.Categoria.findByPk(id);
+        if (!categoria) {
+            return res.status(404).json({ error: "Categoria not found" });
+        }
+        return res.status(200).json(categoria);
+    }
+    catch (error) {
+        return res.status(500).json({ error: error === null || error === void 0 ? void 0 : error.toString() });
+    }
 }));
 categoriaRouter.post("/categoria", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const categoria = yield Categoria_1.Categoria.create(Object.assign({}, req.body));
-    return res.status(201).json(categoria);
+    try {
+        const categoria = yield Categoria_1.Categoria.create(Object.assign({}, req.body));
+        return res.status(201).json(categoria);
+    }
+    catch (error) {
+        return res.status(500).json({ error: error === null || error === void 0 ? void 0 : error.toString() });
+    }
 }));
 categoriaRouter.put("/categoria/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { id } = req.params;
-    yield Categoria_1.Categoria.update(Object.assign({}, req.body), { where: { id } });
-    const updatedCategoria = yield Categoria_1.Categoria.findByPk(id);
-    return res.status(200).json(updatedCategoria);
+    try {
+        const { id } = req.params;
+        yield Categoria_1.Categoria.update(Object.assign({}, req.body), { where: { id } });
+        const updatedCategoria = yield Categoria_1.Categoria.findByPk(id);
+        if (!updatedCategoria) {
+            return res.status(404).json({ error: "Categoria not found" });
+        }
+        return res.status(200).json(updatedCategoria);
+    }
+    catch (error) {
+        return res.status(500).json({ error: error === null || error === void 0 ? void 0 : error.toString() });
+    }
 }));
 categoriaRouter.delete("/categoria/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { id } = req.params;
-    const deletedCategoria = yield Categoria_1.Categoria.findByPk(id);
-    yield Categoria_1.Categoria.destroy({ where: { id } });
-    return res.status(200).json(deletedCategoria);
+    try {
+        const { id } = req.params;
+        const deletedCategoria = yield Categoria_1.Categoria.findByPk(id);
+        if (!deletedCategoria) {
+            return res.status(404).json({ error: "Categoria not found" });
+        }
+        yield Categoria_1.Categoria.destroy({ where: { id } });
+        return res.status(200).json(deletedCategoria);
+    }
+    catch (error) {
+        return res.status(500).json({ error: error === null || error === void 0 ? void 0 : error.toString() });
+    }
 }));

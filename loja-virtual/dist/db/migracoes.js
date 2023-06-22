@@ -15,8 +15,16 @@ migracoes.set(2, {
     consultas: [
         {
             model: "Clientes",
-            query: `ALTER TABLE Clientes CHANGE sexo endereco
+            query: `ALTER TABLE Clientes CHANGE sexo sexo_escrito
     VARCHAR(45);`,
+        },
+    ],
+});
+migracoes.set(3, {
+    consultas: [
+        {
+            model: "Clientes",
+            query: `ALTER TABLE Clientes DROP COLUMN sexo_escrito;`,
         },
     ],
 });

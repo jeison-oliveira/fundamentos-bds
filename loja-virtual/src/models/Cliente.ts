@@ -45,7 +45,7 @@ export class Cliente extends Model {
     type: DataType.STRING,
   })
   email!: string;
-
+  /*
   @AllowNull(true)
   @Unique
   @IsEmail
@@ -53,6 +53,8 @@ export class Cliente extends Model {
     type: DataType.STRING,
   })
   sexo!: string;
+  //sexo_escrito!: string;
+*/
 
   @BelongsToMany(() => Produto, () => Venda)
   produtos!: Produto[];

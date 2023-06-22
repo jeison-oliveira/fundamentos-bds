@@ -2,6 +2,7 @@ export interface MigracaoDB {
   consultas?: Array<{ model: string; query: string }>;
 }
 const migracoes: Map<number, MigracaoDB> = new Map<number, MigracaoDB>();
+
 migracoes.set(1, {
   consultas: [
     {
@@ -15,30 +16,19 @@ migracoes.set(2, {
   consultas: [
     {
       model: "Clientes",
-      query: `ALTER TABLE Clientes CHANGE sexo endereco
+      query: `ALTER TABLE Clientes CHANGE sexo sexo_escrito
     VARCHAR(45);`,
     },
   ],
 });
-/*
-migracoes.set(4, {
+
+migracoes.set(3, {
   consultas: [
     {
-      model: "Dependentes",
-      query: `ALTER TABLE Dependentes DROP COLUMN endereco;`,
-    },
-    {
-      model: "Dependentes",
-      query: `ALTER TABLE Dependentes DROP COLUMN atributo_adicionado_2;`,
+      model: "Clientes",
+      query: `ALTER TABLE Clientes DROP COLUMN sexo_escrito;`,
     },
   ],
 });
-migracoes.set(5, {
-  consultas: [
-    {
-      model: "Dependentes",
-      query: `DROP TABLE Dependentes`,
-    },
-  ],
-});*/
+
 export { migracoes };
