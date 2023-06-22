@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Categoria",
+    "dateExported": "2023-06-22T11:51:51.506Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3487c6b5-f687-47c5-a936-ae5b2f7d9cca",
+            "colId": "f8480173-0867-4872-bbba-58d602a3718a",
+            "containerId": "",
+            "name": "Obter Categoria",
+            "url": "{{api_url}}:{{api_port}}/categoria/40aa75c0-10a7-11ee-96cf-51b8d7abf39d",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-22T02:50:21.275Z",
+            "modified": "2023-06-22T03:21:44.912Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "328f6fbe-701d-47d5-9e1c-735508752bfd",
+            "colId": "f8480173-0867-4872-bbba-58d602a3718a",
+            "containerId": "",
+            "name": "Obter Categorias",
+            "url": "{{api_url}}:{{api_port}}/categoria",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-22T03:13:41.978Z",
+            "modified": "2023-06-22T03:21:51.243Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4e82507d-0df1-42b2-8c55-58f66c4b39bf",
+            "colId": "f8480173-0867-4872-bbba-58d602a3718a",
+            "containerId": "",
+            "name": "Alterar Categoria",
+            "url": "{{api_url}}:{{api_port}}/categoria/bd39d1d0-10a7-11ee-96cf-51b8d7abf39d",
+            "method": "PUT",
+            "sortNum": 35000,
+            "created": "2023-06-22T03:14:35.988Z",
+            "modified": "2023-06-22T03:21:30.919Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descricao\":\"Perfumes\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a588ac56-bcf1-4218-8439-40a2de1609d5",
+            "colId": "f8480173-0867-4872-bbba-58d602a3718a",
+            "containerId": "",
+            "name": "Criar Categoria",
+            "url": "{{api_url}}:{{api_port}}/categoria",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-06-22T02:45:51.369Z",
+            "modified": "2023-06-22T03:20:53.460Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descricao\":\"Produtos Alimentícios\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

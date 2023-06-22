@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Produto",
+    "dateExported": "2023-06-22T11:52:23.531Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c1297eaa-cbfc-4da0-9998-e39dfcc0f37a",
+            "colId": "46273723-a3f7-4d3f-a1bd-53fa0dfa23e5",
+            "containerId": "",
+            "name": "Criar Produto",
+            "url": "{{api_url}}:{{api_port}}/produto",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-22T03:18:12.185Z",
+            "modified": "2023-06-22T03:22:42.453Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descricao\":\"\",\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
